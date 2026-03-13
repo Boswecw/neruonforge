@@ -101,7 +101,7 @@ Form:
       MODEL \
       PROMPT_FILE \
       INPUT_FILE \
-      RUN_TYPE \
+      TASK \
       NOTES
 
 ### 6 arguments
@@ -118,7 +118,7 @@ Form:
       PROMPT_FILE \
       INPUT_FILE \
       OUTPUT_FILE \
-      RUN_TYPE \
+      TASK \
       NOTES
 
 ### 7 arguments
@@ -135,7 +135,7 @@ Form:
       PROMPT_FILE \
       INPUT_FILE \
       OUTPUT_FILE \
-      RUN_TYPE \
+      TASK \
       NOTES
 
 ### 8 arguments
@@ -151,7 +151,7 @@ Form:
       PROMPT_FILE \
       INPUT_FILE \
       OUTPUT_FILE \
-      RUN_TYPE \
+      TASK \
       NOTES
 
 ---
