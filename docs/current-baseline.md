@@ -36,6 +36,8 @@ Rejected challengers:
 - prompt challenger `lore-safe-proofread-004` with `qwen2.5:14b` — `run-2026-03-13-019`
 - `llama3.1:8b` — `run-2026-03-13-020`
 - `mistral:7b-instruct` — `run-2026-03-13-021`
+- `olmo2:13b` — `run-2026-03-13-022`
+- `cogito:14b` — `run-2026-03-13-023`
 
 ## Reason
 This combination is still the strongest confirmed result so far.

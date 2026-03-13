@@ -102,3 +102,25 @@ This registry should record current status cleanly without duplicating entries f
   best confirmed run: run-2026-03-13-021
   latest successful verification runs: run-2026-03-13-021
   notes: returned grammatically clean output, but failed the baseline challenge due to substantial editorial drift and normalized too many acceptable literary phrasings instead of performing minimal correction
+
+- model name: olmo2:13b
+  source: Ollama
+  size: 13b
+  quant: unknown
+  runtime: local
+  status: rejected for current baseline
+  confirmed use case: lore-safe proofreading challenger
+  best confirmed run: run-2026-03-13-022
+  latest successful verification runs: run-2026-03-13-022
+  notes: relatively strong and restrained challenger that correctly fixed the core grammar error and preserved several desirable literary phrasings, but still failed the baseline challenge due to an unnecessary optional substitution (`said enough` → `spoke enough`)
+
+- model name: cogito:14b
+  source: Ollama
+  size: 14b
+  quant: unknown
+  runtime: local
+  status: rejected for current baseline
+  confirmed use case: lore-safe proofreading challenger
+  best confirmed run: run-2026-03-13-023
+  latest successful verification runs: run-2026-03-13-023
+  notes: produced generally clean output and fixed the core grammar error, but failed the baseline challenge due to unnecessary literary normalization and phrasing drift (`as if it were` → `as if it was`, `said enough` → `spoke enough`, and `had seen` → `saw` kept it below the qwen2.5:14b baseline)

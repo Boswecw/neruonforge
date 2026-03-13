@@ -185,3 +185,21 @@
   output file: outputs/run-2026-03-13-021-lore-safe-test-001-mistral-7b-instruct.md
   task: lore-safe-proofreading
   notes: challenger run for mistral:7b-instruct against current qwen2.5:14b baseline
+
+- run id: run-2026-03-13-022
+  date: 2026-03-13
+  model: olmo2:13b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-001.md
+  output file: outputs/run-2026-03-13-022-lore-safe-test-001-olmo2-13b.md
+  task: lore-safe-proofreading
+  notes: challenger run for olmo2:13b against current qwen2.5:14b baseline
+
+- run id: run-2026-03-13-023
+  date: 2026-03-13
+  model: cogito:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-001.md
+  output file: outputs/run-2026-03-13-023-lore-safe-test-001-cogito-14b.md
+  task: lore-safe-proofreading
+  notes: challenger run for cogito:14b against current qwen2.5:14b baseline
