@@ -15,9 +15,18 @@ inputs/lore-safe-test-001.md
 ## Best Confirmed Run
 run-2026-03-13-005
 
+## Latest Successful Verification Runs
+- run-2026-03-13-014
+- run-2026-03-13-015
+
 ## Reason
 This combination is the strongest confirmed result so far.
-It returns clean output without reasoning leakage or commentary.
+
+Run `run-2026-03-13-005` remains the quality anchor for the current baseline decision.
+
+Later runs `run-2026-03-13-014` and `run-2026-03-13-015` verified that the same baseline combination still executes successfully through the wrapper-driven workflow, but they do not by themselves replace the best confirmed run.
+
+This baseline returns clean output without reasoning leakage or commentary.
 It preserves protected terms and literary tone better than the prior model baseline.
 It still makes occasional minor phrasing drift, but overall it is acceptable as the current baseline.
 
