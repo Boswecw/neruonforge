@@ -1,26 +1,48 @@
 # Model Registry
 
+## Purpose
+
+Track models that have actually been used in Neuronforge experiments.
+
+This registry should record current status cleanly without duplicating entries for the same runtime model unless there is a real reason to distinguish them.
+
+---
+
 ## Fields
+
 - model name
 - source
 - size
 - quant
 - runtime
 - status
+- confirmed use case
+- best confirmed run
+- latest successful verification runs
 - notes
 
+---
+
 ## Entries
-- model name: qwen2.5:14b
+
+- model name: deepseek-r1:7b
   source: Ollama
-  size: 14b
+  size: 7b
   quant: unknown
   runtime: local
-  status: candidate
-  notes: passed one-line grammar sanity check cleanly; no reasoning leakage; good candidate for proofreading baseline
+  status: rejected for current baseline
+  confirmed use case: initial proofreading comparison only
+  best confirmed run: run-2026-03-13-001
+  latest successful verification runs: none
+  notes: failed current proofreading baseline requirements; exposed reasoning, added commentary, violated return-only-text constraints, and altered meaning too aggressively
+
 - model name: qwen2.5:14b
   source: Ollama
   size: 14b
   quant: unknown
   runtime: local
   status: current baseline
-  notes: current best lore-safe proofreading baseline with prompts/lore-safe-proofread-003.md; clean output, no reasoning leakage, good minimal-edit behavior, somewhat slow
+  confirmed use case: lore-safe proofreading
+  best confirmed run: run-2026-03-13-005
+  latest successful verification runs: run-2026-03-13-014, run-2026-03-13-015
+  notes: current best confirmed lore-safe proofreading model; clean output, no reasoning leakage observed in confirmed baseline runs, preserves protected terms and literary tone better than the prior baseline model, still shows occasional non-minimal phrasing drift, somewhat slow, and may hit runtime memory limits depending on available free memory
