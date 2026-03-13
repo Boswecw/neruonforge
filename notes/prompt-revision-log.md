@@ -66,3 +66,24 @@ Reduce unnecessary rewrites while keeping grammar correction quality and clean o
 
 ### Related Run
 run-2026-03-13-004
+
+### Date
+2026-03-13
+
+### Prompt File
+prompts/lore-safe-proofread-004.md
+
+### Revision ID
+rev-003
+
+### What Changed
+Forked the accepted baseline prompt into a new challenger prompt and added explicit preservation of tense and aspect. Added explicit instructions not to normalize tense or aspect when the original is already acceptable, and not to replace unusual but valid literary phrasing with more common phrasing.
+
+### Why
+Several challenger outputs and the current accepted baseline still showed optional editorial substitutions around tense, aspect, and literary phrasing. This revision is intended to pressure the model further toward minimal-edit behavior without changing the accepted baseline prompt.
+
+### Expected Effect
+Reduce optional phrasing drift such as tense/aspect normalization and preserve unusual but valid literary constructions more consistently.
+
+### Related Run
+run-2026-03-13-005

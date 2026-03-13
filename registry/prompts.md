@@ -53,3 +53,11 @@ This registry should record prompt role, status, and known outcome clearly enoug
   status: current baseline prompt
   best confirmed run: run-2026-03-13-005
   notes: current best confirmed proofreading prompt; produces clean output with no confirmed reasoning leakage in baseline use and reduces unnecessary rewrites relative to the prior revision
+
+- prompt id: lore-safe-proofread-004
+  file name: prompts/lore-safe-proofread-004.md
+  purpose: tense/aspect preservation challenger prompt
+  target model: qwen2.5:14b
+  status: rejected prompt challenger
+  best confirmed run: run-2026-03-13-019
+  notes: added explicit tense/aspect preservation and anti-normalization guardrails, but did not beat the accepted prompt 003 baseline; remained clean and compliant while introducing worse optional substitutions
