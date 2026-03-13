@@ -112,3 +112,21 @@
   output file: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-03-13-013.md
   task: wrapper auto-output test
   notes: run id, date, and output omitted intentionally; wrapper should fill all three
+
+- run id: run-2026-03-13-014
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-001.md
+  output file: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-03-13-014.md
+  task: proofread
+  notes: live run verification
+
+- run id: run-2026-03-13-015
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-001.md
+  output file: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-03-13-015.md
+  task: proofread
+  notes: post-hardening live run
