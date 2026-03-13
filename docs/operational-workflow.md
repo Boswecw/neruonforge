@@ -217,6 +217,67 @@ Confirm:
 
 ---
 
+## Expected registry record shape
+
+Successful runs logged in `registry/runs.md` should include these fields:
+
+- `run id`
+- `date`
+- `model`
+- `prompt file`
+- `input file`
+- `output file`
+- `task`
+- `notes`
+
+Example shape:
+
+    - run id: run-YYYY-MM-DD-NNN
+      date: YYYY-MM-DD
+      model: <model-name>
+      prompt file: prompts/<prompt-file>.md
+      input file: inputs/<input-file>.md
+      output file: outputs/<output-file>.md
+      task: <task-name>
+      notes: <operator-notes>
+
+This record format is the expected verification target after successful wrapper-driven runs.
+
+---
+
+## Output filename behavior
+
+Output filenames may come from either of two paths.
+
+### Auto-generated output filename
+
+When the wrapper is used in the 5-argument form, it auto-generates `OUTPUT_FILE`.
+
+Verified pattern:
+
+    outputs/<model-slug>-<input-stem>-<run-id>.md
+
+Example:
+
+    outputs/qwen2.5-14b-lore-safe-test-001-run-2026-03-13-015.md
+
+### Manually supplied output filename
+
+When the wrapper is used in a form that explicitly provides `OUTPUT_FILE`, the operator-supplied filename is used as-is.
+
+Examples:
+
+    outputs/qwen2.5-14b-lore-safe-006.md
+    outputs/qwen2.5-14b-lore-safe-007.md
+
+This means output naming in the repository may include both:
+
+- wrapper-generated filenames
+- manually assigned filenames
+
+Both are valid if the run record correctly reflects the file actually written.
+
+---
 ## Verified operator chain
 
 The following operator path has already been verified end to end:
