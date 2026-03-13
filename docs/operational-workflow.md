@@ -98,6 +98,31 @@ This script can:
 - auto-fill missing metadata depending on argument form
 - perform dry-run validation without executing the model
 
+Additional wrapper behavior:
+
+- resolves and runs from the repository root automatically
+- requires these helper scripts to exist and be executable:
+  - `scripts/run-proofread.sh`
+  - `scripts/log-run.sh`
+  - `scripts/next-run-id.sh`
+
+Dry-run behavior:
+
+- does not execute proofreading
+- does not write a log entry
+- prints the fully resolved run metadata for operator review
+
+Dry-run output fields:
+
+- `run id`
+- `date`
+- `model`
+- `prompt file`
+- `input file`
+- `output file`
+- `task`
+- `notes`
+
 ---
 
 ## Wrapper argument forms
@@ -272,11 +297,13 @@ When the wrapper is used in the 5-argument form, it auto-generates `OUTPUT_FILE`
 
 Verified pattern:
 
-    outputs/<model-slug>-<input-stem>-<run-id>.md
+    outputs/<sanitized-model>-<input-stem>-<run-id>.md
 
 Example:
 
     outputs/qwen2.5-14b-lore-safe-test-001-run-2026-03-13-015.md
+
+Where `<sanitized-model>` is produced by replacing `:` and `/` in the model name with `-`.
 
 ### Manually supplied output filename
 
@@ -364,4 +391,4 @@ Use this sequence for repeatable manual execution:
 7. verify log entry in `registry/runs.md`
 8. inspect output quality before changing anything else
 
-This keeps the workflow controlled, auditable, and easy to debug.
+This keeps the workflow controlled, auditable, and easy to debug
