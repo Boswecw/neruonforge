@@ -58,3 +58,14 @@ This registry should record current status cleanly without duplicating entries f
   latest successful verification runs: run-2026-03-13-016
   notes: stayed inside the return-only-text contract and preserved protected terms and literary tone, but failed basic proofreading quality with clear grammar errors; not strong enough to challenge the current qwen2.5:14b baseline
 
+
+- model name: qwen2.5:7b
+  source: Ollama
+  size: 7b
+  quant: unknown
+  runtime: local
+  status: rejected for current baseline
+  confirmed use case: lore-safe proofreading challenger
+  best confirmed run: run-2026-03-13-017
+  latest successful verification runs: run-2026-03-13-017
+  notes: stayed inside the return-only-text contract and preserved protected terms and meaning, but showed more editorial phrasing drift than the current qwen2.5:14b baseline and did not clearly improve proofreading quality
