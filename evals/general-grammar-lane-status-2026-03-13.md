@@ -6,6 +6,7 @@
 - prompt: `prompts/general-grammar-cleanup-001.md`
 - anchor input: `inputs/general-grammar-test-001.md`
 - direct compare baseline file: `outputs/qwen2.5-14b-general-grammar-test-001.md`
+- calibration doc: `evals/general-grammar-calibration-2026-03-13.md`
 
 ## Phi4 contender summary
 
@@ -23,8 +24,13 @@
 - this lane favors cleanup with meaning preservation over semantic recasting
 - model ranking is by lane, not global
 
+## Governance state
+
+- baseline established
+- calibration/adoption decision documented
+- lane status and calibration are now aligned
+
 ## Next likely step
 
-- align `docs/current-baseline.md` so it distinguishes lane-specific baselines
-- optionally add a dedicated calibration or decision doc for the general grammar lane
-
+- cross-link this calibration doc from any analytics or baseline index docs if still missing
+- optionally add a dedicated adoption-history section if this lane gains future challengers

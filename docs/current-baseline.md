@@ -76,6 +76,9 @@ inputs/general-grammar-test-001.md
 ### Best Current Anchor Reference
 outputs/qwen2.5-14b-general-grammar-test-001.md
 
+### Calibration Document
+evals/general-grammar-calibration-2026-03-13.md
+
 ### Locked Conclusion
 The current lane baseline is:
 
@@ -101,6 +104,7 @@ Tested challenger:
 
 This lane ranking is lane-specific and does not imply a global model ranking.
 
-### Next Improvement Target
-Create a dedicated calibration or adoption-decision document for this lane and then commit the new lane artifacts together.
+The lane now has a dedicated calibration/adoption decision document and aligned status tracking.
 
+### Next Improvement Target
+Add future challenger results to the calibration history when additional models are tested.
