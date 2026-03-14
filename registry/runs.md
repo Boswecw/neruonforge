@@ -203,3 +203,102 @@
   output file: outputs/run-2026-03-13-023-lore-safe-test-001-cogito-14b.md
   task: lore-safe-proofreading
   notes: challenger run for cogito:14b against current qwen2.5:14b baseline
+
+- run id: run-2026-03-13-024
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-001.md
+  output file: outputs/run-2026-03-13-024-lore-safe-test-001-phi4-14b.md
+  task: lore-safe-proofreading
+  notes: challenger run for phi4:14b against current qwen2.5:14b baseline
+
+- run id: run-2026-03-13-025
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-002.md
+  output file: outputs/run-2026-03-13-025-lore-safe-test-002-qwen2.5-14b.md
+  task: lore-safe-proofreading
+  notes: baseline suite expansion test 002 with locked qwen baseline
+
+- run id: run-2026-03-13-026
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-002.md
+  output file: outputs/run-2026-03-13-026-lore-safe-test-002-phi4-14b.md
+  task: lore-safe-proofreading
+  notes: challenger suite expansion test 002 with phi4 contender
+
+- run id: run-2026-03-13-027
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-003.md
+  output file: outputs/run-2026-03-13-027-lore-safe-test-003-qwen2.5-14b.md
+  task: lore-safe-proofreading
+  notes: baseline suite expansion test 003 with locked qwen baseline
+
+- run id: run-2026-03-13-028
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-003.md
+  output file: outputs/run-2026-03-13-028-lore-safe-test-003-phi4-14b.md
+  task: lore-safe-proofreading
+  notes: challenger suite expansion test 003 with phi4 contender
+
+- run id: run-2026-03-13-029
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-004.md
+  output file: outputs/run-2026-03-13-029-lore-safe-test-004-qwen2.5-14b.md
+  task: lore-safe-proofreading
+  notes: baseline suite expansion test 004 with locked qwen baseline
+
+- run id: run-2026-03-13-030
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-004.md
+  output file: outputs/run-2026-03-13-030-lore-safe-test-004-phi4-14b.md
+  task: lore-safe-proofreading
+  notes: challenger suite expansion test 004 with phi4 contender
+
+- run id: run-2026-03-13-031
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-005.md
+  output file: outputs/run-2026-03-13-031-lore-safe-test-005-qwen2.5-14b.md
+  task: lore-safe-proofreading
+  notes: baseline suite expansion test 005 with locked qwen baseline
+
+- run id: run-2026-03-13-032
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-005.md
+  output file: outputs/run-2026-03-13-032-lore-safe-test-005-phi4-14b.md
+  task: lore-safe-proofreading
+  notes: challenger suite expansion test 005 with phi4 contender
+
+- run id: run-2026-03-13-033
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-006.md
+  output file: outputs/run-2026-03-13-033-lore-safe-test-006-qwen2.5-14b.md
+  task: lore-safe-proofreading
+  notes: baseline suite expansion test 006 with locked qwen baseline
+
+- run id: run-2026-03-13-034
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/lore-safe-proofread-003.md
+  input file: inputs/lore-safe-test-006.md
+  output file: outputs/run-2026-03-13-034-lore-safe-test-006-phi4-14b.md
+  task: lore-safe-proofreading
+  notes: challenger suite expansion test 006 with phi4 contender
