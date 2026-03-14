@@ -1,25 +1,27 @@
-# Current Baseline
+# Current Baselines
 
-## Task
+## Lore-safe proofreading
+
+### Task
 Lore-safe proofreading
 
-## Baseline Model
+### Baseline Model
 qwen2.5:14b
 
-## Baseline Prompt
+### Baseline Prompt
 prompts/lore-safe-proofread-003.md
 
-## Baseline Input Reference
+### Baseline Input Reference
 inputs/lore-safe-test-001.md
 
-## Best Confirmed Run
+### Best Confirmed Run
 run-2026-03-13-005
 
-## Latest Successful Verification Runs
+### Latest Successful Verification Runs
 - run-2026-03-13-014
 - run-2026-03-13-015
 
-## Locked Conclusion
+### Locked Conclusion
 The accepted baseline remains unchanged:
 
 - model: `qwen2.5:14b`
@@ -39,7 +41,7 @@ Rejected challengers:
 - `olmo2:13b` — `run-2026-03-13-022`
 - `cogito:14b` — `run-2026-03-13-023`
 
-## Reason
+### Reason
 This combination is still the strongest confirmed result so far.
 
 Run `run-2026-03-13-005` remains the quality anchor for the current baseline decision.
@@ -52,5 +54,53 @@ This baseline returns clean output without reasoning leakage or commentary.
 It preserves protected terms and literary tone better than the prior model baseline.
 It still makes occasional minor phrasing drift, but overall it is acceptable as the current baseline.
 
-## Next Improvement Target
+### Next Improvement Target
 Reduce the remaining phrasing drift without harming compliance.
+
+---
+
+## General grammar cleanup
+
+### Task
+General grammar cleanup
+
+### Baseline Model
+qwen2.5:14b
+
+### Baseline Prompt
+prompts/general-grammar-cleanup-001.md
+
+### Baseline Input Reference
+inputs/general-grammar-test-001.md
+
+### Best Current Anchor Reference
+outputs/qwen2.5-14b-general-grammar-test-001.md
+
+### Locked Conclusion
+The current lane baseline is:
+
+- model: `qwen2.5:14b`
+- prompt: `prompts/general-grammar-cleanup-001.md`
+
+Current evaluation status after five tests:
+
+- test 001: qwen2.5:14b slight win
+- test 002: near tie, slight lean to qwen2.5:14b
+- test 003: qwen2.5:14b clear win
+- test 004: qwen2.5:14b clear win
+- test 005: qwen2.5:14b clear win
+
+Tested challenger:
+
+- `phi4:14b` — not adopted for this lane
+
+### Reason
+`qwen2.5:14b` currently fits this lane better because it improves grammar and readability while preserving intended meaning more reliably.
+
+`phi4:14b` is readable, but it repeatedly trends toward interpretive normalization, semantic recasting, and flatter phrasing in places where the lane calls for cleanup rather than rewriting.
+
+This lane ranking is lane-specific and does not imply a global model ranking.
+
+### Next Improvement Target
+Create a dedicated calibration or adoption-decision document for this lane and then commit the new lane artifacts together.
+

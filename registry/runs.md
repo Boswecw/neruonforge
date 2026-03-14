@@ -302,3 +302,93 @@
   output file: outputs/run-2026-03-13-034-lore-safe-test-006-phi4-14b.md
   task: lore-safe-proofreading
   notes: challenger suite expansion test 006 with phi4 contender
+
+- run id: run-2026-03-13-035
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-001.md
+  output file: outputs/qwen2.5-14b-general-grammar-test-001.md
+  task: general-grammar-cleanup
+  notes: anchor run for general grammar lane
+
+- run id: run-2026-03-13-036
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-001.md
+  output file: outputs/phi4-14b-general-grammar-test-001.md
+  task: general-grammar-cleanup
+  notes: anchor run for general grammar lane
+
+- run id: run-2026-03-13-037
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-002.md
+  output file: outputs/qwen2.5-14b-general-grammar-test-002.md
+  task: general-grammar-cleanup
+  notes: test 002 for general grammar lane
+
+- run id: run-2026-03-13-038
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-002.md
+  output file: outputs/phi4-14b-general-grammar-test-002.md
+  task: general-grammar-cleanup
+  notes: test 002 for general grammar lane
+
+- run id: run-2026-03-13-039
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-003.md
+  output file: outputs/qwen2.5-14b-general-grammar-test-003.md
+  task: general-grammar-cleanup
+  notes: test 003 for general grammar lane
+
+- run id: run-2026-03-13-040
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-003.md
+  output file: outputs/phi4-14b-general-grammar-test-003.md
+  task: general-grammar-cleanup
+  notes: test 003 for general grammar lane
+
+- run id: run-2026-03-13-041
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-004.md
+  output file: outputs/qwen2.5-14b-general-grammar-test-004.md
+  task: general-grammar-cleanup
+  notes: test 004 for general grammar lane
+
+- run id: run-2026-03-13-042
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-004.md
+  output file: outputs/phi4-14b-general-grammar-test-004.md
+  task: general-grammar-cleanup
+  notes: test 004 for general grammar lane
+
+- run id: run-2026-03-13-043
+  date: 2026-03-13
+  model: qwen2.5:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-005.md
+  output file: outputs/qwen2.5-14b-general-grammar-test-005.md
+  task: general-grammar-cleanup
+  notes: test 005 for general grammar lane
+
+- run id: run-2026-03-13-044
+  date: 2026-03-13
+  model: phi4:14b
+  prompt file: prompts/general-grammar-cleanup-001.md
+  input file: inputs/general-grammar-test-005.md
+  output file: outputs/phi4-14b-general-grammar-test-005.md
+  task: general-grammar-cleanup
+  notes: test 005 for general grammar lane
