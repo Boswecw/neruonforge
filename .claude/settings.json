@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(scripts/run-continuity-adjacent-scene.sh phi4-reasoning:latest inputs/case-packets/cp-003.json)",
+      "Bash(bash doc/system/BUILD.sh)",
+      "Bash(scripts/run-continuity-adjacent-scene.sh qwen2.5:14b inputs/case-packets/cp-003.json)"
+    ]
+  }
+}

@@ -13,7 +13,7 @@ if [ ! -f "$RUNS_FILE" ]; then
 fi
 
 LAST_NUM="$(
-  grep -oE "run-$TODAY-[0-9]{3}" "$RUNS_FILE" \
+  { grep -oE "run-$TODAY-[0-9]{3}" "$RUNS_FILE" || :; } \
     | sed -E "s/run-$TODAY-([0-9]{3})/\1/" \
     | sort -n \
     | tail -n 1

@@ -392,3 +392,741 @@
   output file: outputs/phi4-14b-general-grammar-test-005.md
   task: general-grammar-cleanup
   notes: test 005 for general grammar lane
+
+- run id: run-2026-03-14-001
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-001.json
+  output file: outputs/phi4-14b-continuity-adj-cp001-sc-a-cp001-sc-b-run-2026-03-14-001.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp001-sc-a+cp001-sc-b, findings: 1
+
+- run id: run-2026-03-14-002
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-002.json
+  output file: outputs/phi4-14b-continuity-adj-cp002-sc-a-cp002-sc-b-run-2026-03-14-002.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp002-sc-a+cp002-sc-b, findings: 1
+
+- run id: run-2026-03-14-003
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-003.json
+  output file: outputs/phi4-14b-continuity-adj-cp003-sc-a-cp003-sc-b-run-2026-03-14-003.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp003-sc-a+cp003-sc-b, findings: 1
+
+- run id: run-2026-03-14-004
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-004.json
+  output file: outputs/phi4-14b-continuity-adj-cp004-sc-a-cp004-sc-b-run-2026-03-14-004.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp004-sc-a+cp004-sc-b, findings: 1
+
+- run id: run-2026-03-14-005
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-005.json
+  output file: outputs/phi4-14b-continuity-adj-cp005-sc-a-cp005-sc-b-run-2026-03-14-005.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp005-sc-a+cp005-sc-b, findings: 1
+
+- run id: run-2026-03-14-006
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-006.json
+  output file: outputs/phi4-14b-continuity-adj-cp006-sc-a-cp006-sc-b-run-2026-03-14-006.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp006-sc-a+cp006-sc-b, findings: 1
+
+- run id: run-2026-03-14-007
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-007.json
+  output file: outputs/phi4-14b-continuity-adj-cp007-sc-a-cp007-sc-b-run-2026-03-14-007.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp007-sc-a+cp007-sc-b, findings: 1
+
+- run id: run-2026-03-14-008
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-008.json
+  output file: outputs/phi4-14b-continuity-adj-cp008-sc-a-cp008-sc-b-run-2026-03-14-008.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp008-sc-a+cp008-sc-b, findings: 1
+
+- run id: run-2026-03-14-009
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-009.json
+  output file: outputs/phi4-14b-continuity-adj-cp009-sc-a-cp009-sc-b-run-2026-03-14-009.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp009-sc-a+cp009-sc-b, findings: 0
+
+- run id: run-2026-03-14-010
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-010.json
+  output file: outputs/phi4-14b-continuity-adj-cp010-sc-a-cp010-sc-b-run-2026-03-14-010.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp010-sc-a+cp010-sc-b, findings: 1
+
+- run id: run-2026-03-14-011
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-011.json
+  output file: outputs/phi4-14b-continuity-adj-cp011-sc-a-cp011-sc-b-run-2026-03-14-011.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp011-sc-a+cp011-sc-b, findings: 0
+
+- run id: run-2026-03-14-012
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-012.json
+  output file: outputs/phi4-14b-continuity-adj-cp012-sc-a-cp012-sc-b-run-2026-03-14-012.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp012-sc-a+cp012-sc-b, findings: 0
+
+- run id: run-2026-03-14-013
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-001.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp001-sc-a-cp001-sc-b-run-2026-03-14-013.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp001-sc-a+cp001-sc-b, findings: 1
+
+- run id: run-2026-03-14-014
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-002.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp002-sc-a-cp002-sc-b-run-2026-03-14-014.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp002-sc-a+cp002-sc-b, findings: 1
+
+- run id: run-2026-03-14-015
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-003.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp003-sc-a-cp003-sc-b-run-2026-03-14-015.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp003-sc-a+cp003-sc-b, findings: 1
+
+- run id: run-2026-03-14-016
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-004.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp004-sc-a-cp004-sc-b-run-2026-03-14-016.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp004-sc-a+cp004-sc-b, findings: 0
+
+- run id: run-2026-03-14-017
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-005.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp005-sc-a-cp005-sc-b-run-2026-03-14-017.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp005-sc-a+cp005-sc-b, findings: 0
+
+- run id: run-2026-03-14-018
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-006.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp006-sc-a-cp006-sc-b-run-2026-03-14-018.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp006-sc-a+cp006-sc-b, findings: 0
+
+- run id: run-2026-03-14-019
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-007.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp007-sc-a-cp007-sc-b-run-2026-03-14-019.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp007-sc-a+cp007-sc-b, findings: 1
+
+- run id: run-2026-03-14-020
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-008.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp008-sc-a-cp008-sc-b-run-2026-03-14-020.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp008-sc-a+cp008-sc-b, findings: 0
+
+- run id: run-2026-03-14-021
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-009.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp009-sc-a-cp009-sc-b-run-2026-03-14-021.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp009-sc-a+cp009-sc-b, findings: 0
+
+- run id: run-2026-03-14-022
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-010.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp010-sc-a-cp010-sc-b-run-2026-03-14-022.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp010-sc-a+cp010-sc-b, findings: 0
+
+- run id: run-2026-03-14-023
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-011.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp011-sc-a-cp011-sc-b-run-2026-03-14-023.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp011-sc-a+cp011-sc-b, findings: 0
+
+- run id: run-2026-03-14-024
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-012.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp012-sc-a-cp012-sc-b-run-2026-03-14-024.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp012-sc-a+cp012-sc-b, findings: 0
+
+- run id: run-2026-03-14-025
+  date: 2026-03-14
+  model: phi4-reasoning:latest
+  prompt file: prompts/continuity-adjacent-scene-v1.md
+  input file: inputs/case-packets/cp-001.json
+  output file: outputs/phi4-reasoning-latest-continuity-adj-cp001-sc-a-cp001-sc-b-run-2026-03-14-025.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp001-sc-a+cp001-sc-b, findings: 0
+
+- run id: run-2026-03-14-026
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-001.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp001-sc-a-cp001-sc-b-run-2026-03-14-026.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp001-sc-a+cp001-sc-b, findings: 0
+
+- run id: run-2026-03-14-027
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-002.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp002-sc-a-cp002-sc-b-run-2026-03-14-027.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp002-sc-a+cp002-sc-b, findings: 0
+
+- run id: run-2026-03-14-028
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-003.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp003-sc-a-cp003-sc-b-run-2026-03-14-028.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp003-sc-a+cp003-sc-b, findings: 0
+
+- run id: run-2026-03-14-029
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-004.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp004-sc-a-cp004-sc-b-run-2026-03-14-029.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp004-sc-a+cp004-sc-b, findings: 0
+
+- run id: run-2026-03-14-030
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-005.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp005-sc-a-cp005-sc-b-run-2026-03-14-030.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp005-sc-a+cp005-sc-b, findings: 0
+
+- run id: run-2026-03-14-031
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-006.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp006-sc-a-cp006-sc-b-run-2026-03-14-031.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp006-sc-a+cp006-sc-b, findings: 0
+
+- run id: run-2026-03-14-032
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-007.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp007-sc-a-cp007-sc-b-run-2026-03-14-032.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp007-sc-a+cp007-sc-b, findings: 0
+
+- run id: run-2026-03-14-033
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-008.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp008-sc-a-cp008-sc-b-run-2026-03-14-033.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp008-sc-a+cp008-sc-b, findings: 0
+
+- run id: run-2026-03-14-034
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-009.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp009-sc-a-cp009-sc-b-run-2026-03-14-034.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp009-sc-a+cp009-sc-b, findings: 0
+
+- run id: run-2026-03-14-035
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-010.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp010-sc-a-cp010-sc-b-run-2026-03-14-035.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp010-sc-a+cp010-sc-b, findings: 0
+
+- run id: run-2026-03-14-036
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-011.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp011-sc-a-cp011-sc-b-run-2026-03-14-036.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp011-sc-a+cp011-sc-b, findings: 0
+
+- run id: run-2026-03-14-037
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v2.md
+  input file: inputs/case-packets/cp-012.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp012-sc-a-cp012-sc-b-run-2026-03-14-037.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp012-sc-a+cp012-sc-b, findings: 0
+
+- run id: run-2026-03-14-038
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-001.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp001-sc-a-cp001-sc-b-run-2026-03-14-038.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp001-sc-a+cp001-sc-b, findings: 1
+
+- run id: run-2026-03-14-039
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-002.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp002-sc-a-cp002-sc-b-run-2026-03-14-039.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp002-sc-a+cp002-sc-b, findings: 0
+
+- run id: run-2026-03-14-040
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-004.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp004-sc-a-cp004-sc-b-run-2026-03-14-040.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp004-sc-a+cp004-sc-b, findings: 0
+
+- run id: run-2026-03-14-041
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-005.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp005-sc-a-cp005-sc-b-run-2026-03-14-041.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp005-sc-a+cp005-sc-b, findings: 1
+
+- run id: run-2026-03-14-042
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-006.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp006-sc-a-cp006-sc-b-run-2026-03-14-042.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp006-sc-a+cp006-sc-b, findings: 0
+
+- run id: run-2026-03-14-043
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-007.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp007-sc-a-cp007-sc-b-run-2026-03-14-043.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp007-sc-a+cp007-sc-b, findings: 1
+
+- run id: run-2026-03-14-044
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-008.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp008-sc-a-cp008-sc-b-run-2026-03-14-044.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp008-sc-a+cp008-sc-b, findings: 0
+
+- run id: run-2026-03-14-045
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-009.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp009-sc-a-cp009-sc-b-run-2026-03-14-045.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp009-sc-a+cp009-sc-b, findings: 0
+
+- run id: run-2026-03-14-046
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-010.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp010-sc-a-cp010-sc-b-run-2026-03-14-046.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp010-sc-a+cp010-sc-b, findings: 0
+
+- run id: run-2026-03-14-047
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-011.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp011-sc-a-cp011-sc-b-run-2026-03-14-047.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp011-sc-a+cp011-sc-b, findings: 0
+
+- run id: run-2026-03-14-048
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-012.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp012-sc-a-cp012-sc-b-run-2026-03-14-048.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp012-sc-a+cp012-sc-b, findings: 0
+
+- run id: run-2026-03-14-049
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-003.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp003-sc-a-cp003-sc-b-run-2026-03-14-049.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp003-sc-a+cp003-sc-b, findings: 1
+
+- run id: run-2026-03-14-050
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-001.json
+  output file: outputs/phi4-14b-continuity-adj-cp001-sc-a-cp001-sc-b-run-2026-03-14-050.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp001-sc-a+cp001-sc-b, findings: 1
+
+- run id: run-2026-03-14-051
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-002.json
+  output file: outputs/phi4-14b-continuity-adj-cp002-sc-a-cp002-sc-b-run-2026-03-14-051.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp002-sc-a+cp002-sc-b, findings: 0
+
+- run id: run-2026-03-14-052
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-004.json
+  output file: outputs/phi4-14b-continuity-adj-cp004-sc-a-cp004-sc-b-run-2026-03-14-052.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp004-sc-a+cp004-sc-b, findings: 1
+
+- run id: run-2026-03-14-053
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-005.json
+  output file: outputs/phi4-14b-continuity-adj-cp005-sc-a-cp005-sc-b-run-2026-03-14-053.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp005-sc-a+cp005-sc-b, findings: 0
+
+- run id: run-2026-03-14-054
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-006.json
+  output file: outputs/phi4-14b-continuity-adj-cp006-sc-a-cp006-sc-b-run-2026-03-14-054.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp006-sc-a+cp006-sc-b, findings: 0
+
+- run id: run-2026-03-14-055
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-007.json
+  output file: outputs/phi4-14b-continuity-adj-cp007-sc-a-cp007-sc-b-run-2026-03-14-055.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp007-sc-a+cp007-sc-b, findings: 1
+
+- run id: run-2026-03-14-056
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-008.json
+  output file: outputs/phi4-14b-continuity-adj-cp008-sc-a-cp008-sc-b-run-2026-03-14-056.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp008-sc-a+cp008-sc-b, findings: 0
+
+- run id: run-2026-03-14-057
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-009.json
+  output file: outputs/phi4-14b-continuity-adj-cp009-sc-a-cp009-sc-b-run-2026-03-14-057.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp009-sc-a+cp009-sc-b, findings: 0
+
+- run id: run-2026-03-14-058
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-010.json
+  output file: outputs/phi4-14b-continuity-adj-cp010-sc-a-cp010-sc-b-run-2026-03-14-058.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp010-sc-a+cp010-sc-b, findings: 0
+
+- run id: run-2026-03-14-059
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-011.json
+  output file: outputs/phi4-14b-continuity-adj-cp011-sc-a-cp011-sc-b-run-2026-03-14-059.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp011-sc-a+cp011-sc-b, findings: 0
+
+- run id: run-2026-03-14-060
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-012.json
+  output file: outputs/phi4-14b-continuity-adj-cp012-sc-a-cp012-sc-b-run-2026-03-14-060.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp012-sc-a+cp012-sc-b, findings: 1
+
+- run id: run-2026-03-14-061
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-003.json
+  output file: outputs/phi4-14b-continuity-adj-cp003-sc-a-cp003-sc-b-run-2026-03-14-061.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp003-sc-a+cp003-sc-b, findings: 1
+
+- run id: run-2026-03-14-062
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-004.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp004-sc-a-cp004-sc-b-run-2026-03-14-062.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp004-sc-a+cp004-sc-b, findings: 0
+
+- run id: run-2026-03-14-063
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-005.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp005-sc-a-cp005-sc-b-run-2026-03-14-063.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp005-sc-a+cp005-sc-b, findings: 1
+
+- run id: run-2026-03-14-064
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-006.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp006-sc-a-cp006-sc-b-run-2026-03-14-064.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp006-sc-a+cp006-sc-b, findings: 0
+
+- run id: run-2026-03-14-065
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-007.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp007-sc-a-cp007-sc-b-run-2026-03-14-065.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp007-sc-a+cp007-sc-b, findings: 1
+
+- run id: run-2026-03-14-066
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-008.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp008-sc-a-cp008-sc-b-run-2026-03-14-066.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp008-sc-a+cp008-sc-b, findings: 0
+
+- run id: run-2026-03-14-067
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-009.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp009-sc-a-cp009-sc-b-run-2026-03-14-067.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp009-sc-a+cp009-sc-b, findings: 0
+
+- run id: run-2026-03-14-068
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-010.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp010-sc-a-cp010-sc-b-run-2026-03-14-068.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp010-sc-a+cp010-sc-b, findings: 0
+
+- run id: run-2026-03-14-069
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-011.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp011-sc-a-cp011-sc-b-run-2026-03-14-069.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp011-sc-a+cp011-sc-b, findings: 0
+
+- run id: run-2026-03-14-070
+  date: 2026-03-14
+  model: qwen2.5:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-012.json
+  output file: outputs/qwen2.5-14b-continuity-adj-cp012-sc-a-cp012-sc-b-run-2026-03-14-070.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp012-sc-a+cp012-sc-b, findings: 0
+
+- run id: run-2026-03-14-071
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-001.json
+  output file: outputs/phi4-14b-continuity-adj-cp001-sc-a-cp001-sc-b-run-2026-03-14-071.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp001-sc-a+cp001-sc-b, findings: 1
+
+- run id: run-2026-03-14-072
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-002.json
+  output file: outputs/phi4-14b-continuity-adj-cp002-sc-a-cp002-sc-b-run-2026-03-14-072.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp002-sc-a+cp002-sc-b, findings: 0
+
+- run id: run-2026-03-14-073
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-003.json
+  output file: outputs/phi4-14b-continuity-adj-cp003-sc-a-cp003-sc-b-run-2026-03-14-073.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp003-sc-a+cp003-sc-b, findings: 1
+
+- run id: run-2026-03-14-074
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-004.json
+  output file: outputs/phi4-14b-continuity-adj-cp004-sc-a-cp004-sc-b-run-2026-03-14-074.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp004-sc-a+cp004-sc-b, findings: 1
+
+- run id: run-2026-03-14-075
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-005.json
+  output file: outputs/phi4-14b-continuity-adj-cp005-sc-a-cp005-sc-b-run-2026-03-14-075.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp005-sc-a+cp005-sc-b, findings: 0
+
+- run id: run-2026-03-14-076
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-006.json
+  output file: outputs/phi4-14b-continuity-adj-cp006-sc-a-cp006-sc-b-run-2026-03-14-076.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp006-sc-a+cp006-sc-b, findings: 0
+
+- run id: run-2026-03-14-077
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-007.json
+  output file: outputs/phi4-14b-continuity-adj-cp007-sc-a-cp007-sc-b-run-2026-03-14-077.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp007-sc-a+cp007-sc-b, findings: 1
+
+- run id: run-2026-03-14-078
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-008.json
+  output file: outputs/phi4-14b-continuity-adj-cp008-sc-a-cp008-sc-b-run-2026-03-14-078.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp008-sc-a+cp008-sc-b, findings: 1
+
+- run id: run-2026-03-14-079
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-009.json
+  output file: outputs/phi4-14b-continuity-adj-cp009-sc-a-cp009-sc-b-run-2026-03-14-079.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp009-sc-a+cp009-sc-b, findings: 0
+
+- run id: run-2026-03-14-080
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-010.json
+  output file: outputs/phi4-14b-continuity-adj-cp010-sc-a-cp010-sc-b-run-2026-03-14-080.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp010-sc-a+cp010-sc-b, findings: 1
+
+- run id: run-2026-03-14-081
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-011.json
+  output file: outputs/phi4-14b-continuity-adj-cp011-sc-a-cp011-sc-b-run-2026-03-14-081.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp011-sc-a+cp011-sc-b, findings: 1
+
+- run id: run-2026-03-14-082
+  date: 2026-03-14
+  model: phi4:14b
+  prompt file: prompts/continuity-adjacent-scene-v3.md
+  input file: inputs/case-packets/cp-012.json
+  output file: outputs/phi4-14b-continuity-adj-cp012-sc-a-cp012-sc-b-run-2026-03-14-082.envelope.json
+  task: analyze.continuity.adjacent_scene.v1
+  notes: adjacent_scene: cp012-sc-a+cp012-sc-b, findings: 1
