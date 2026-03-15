@@ -3,7 +3,44 @@
     "allow": [
       "Bash(scripts/run-continuity-adjacent-scene.sh phi4-reasoning:latest inputs/case-packets/cp-003.json)",
       "Bash(bash doc/system/BUILD.sh)",
-      "Bash(scripts/run-continuity-adjacent-scene.sh qwen2.5:14b inputs/case-packets/cp-003.json)"
+      "Bash(scripts/run-continuity-adjacent-scene.sh qwen2.5:14b inputs/case-packets/cp-003.json)",
+      "Bash(python3 scripts/validate-lane-records.py)",
+      "Bash(find /home/charlie/Forge/ecosystem/Forge_Command -type f \\\\\\(-name *lane* -o -name *neuron* \\\\\\))",
+      "Bash(find /home/charlie/Forge/ecosystem/Forge_Command -type f \\\\\\(-path */analytics/* -o -path */lanes/* -o -path */data/*lane* \\\\\\))",
+      "Bash(find /home/charlie/Forge/ecosystem -name *lane*.json -o -name *lane*.ts -o -name *analytics*.json)",
+      "Bash(npx svelte-check:*)",
+      "Bash(grep -r \"get_bugcheck_result\\\\|BugCheckResult\\\\|bugcheck\" /home/charlie/Forge/ecosystem/Forge_Command/src/routes --include=*.svelte -l)",
+      "Bash(source venv/bin/activate)",
+      "Bash(python -m pytest tests/test_intent_auth.py tests/test_nonce_security.py tests/test_operations.py tests/test_state_machine.py -v)",
+      "Bash(python -m pytest --tb=short -q)",
+      "Bash(python -m pytest tests/security/test_adversarial.py -q)",
+      "Bash(python -m pytest tests/security/test_adversarial.py -v --tb=short)",
+      "Bash(python -m pytest tests/connectivity/ -v --tb=short)",
+      "Bash(python -m pytest tests/test_token_rotation.py tests/test_canonicalization.py tests/test_rehydration.py tests/test_store_allowlist.py tests/test_run_manager_bounds.py tests/test_signature_format.py tests/test_compression.py -v --tb=short)",
+      "Bash(python -m pytest tests/test_run_manager_bounds.py::TestHardCap::test_run_creation_at_cap_raises -v --tb=long)",
+      "Bash(python -c \"from app.models import OperationSchema; import inspect; print\\([f.name for f in OperationSchema.model_fields.values\\(\\)] if hasattr\\(OperationSchema, ''model_fields''\\) else ''no model_fields''\\)\")",
+      "Bash(python -c \"from app.models import OperationSchema; print\\(list\\(OperationSchema.model_fields.keys\\(\\)\\)\\)\")",
+      "Bash(python -m pytest tests/test_run_manager_bounds.py -v --tb=short)",
+      "Bash(python -m pytest tests/test_cors_validation.py -v --tb=short)",
+      "Bash(python -m pytest tests/test_signature_format.py -v --tb=short)",
+      "Bash(python -m pytest --tb=short -q --co)"
+    ],
+    "additionalDirectories": [
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/lib/types",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/lib/data",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/lib/components",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/routes/neuroforge",
+      "/home/charlie/Forge/ecosystem/Forge_Command/docs",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src-tauri/src",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/lib/stores",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/routes/forge-keys",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/routes/connectivity",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/routes/fleet",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/lib/utils",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src-tauri/migrations",
+      "/home/charlie/Forge/ecosystem/Forge_Command/src/routes/operations",
+      "/home/charlie/Forge/ecosystem/Forge_Command/orchestrator/app",
+      "/home/charlie/Forge/ecosystem/Forge_Command/orchestrator/tests"
     ]
   }
 }
