@@ -77,6 +77,18 @@ Each entry in evidence_spans must include all of the following fields:
 
 ---
 
+## Dimension definitions
+
+Score each dimension from 0.0 (very poor) to 1.0 (excellent):
+
+- **clarity**: How easily the prose communicates its meaning. Penalize unclear antecedents, ambiguous phrasing, tangled syntax.
+- **flow**: How smoothly sentences and paragraphs connect. Penalize abrupt transitions, jarring rhythm breaks, non sequiturs.
+- **voice_consistency**: Whether the narrative voice, register, and point-of-view perspective remain stable throughout the scene. Penalize: POV shifts (e.g. third-person narration interrupted by first-person introspection or address), register shifts (formal to casual or vice versa without dramatic intent), narrator intrusions that break the established perspective. A scene with a mid-scene POV drift must score voice_consistency LOW regardless of other strengths.
+- **sentence_variety**: Whether sentence length and structure are varied enough to sustain reader engagement. Penalize repetitive short sentences, repetitive long sentences, and monotone rhythm.
+- **pacing**: Whether the scene's tempo suits its dramatic content. Penalize rushed emotional beats, over-extended action, and unearned slow-downs.
+
+---
+
 ## Important rules
 
 - Do not claim certainty. This is advisory analysis only.

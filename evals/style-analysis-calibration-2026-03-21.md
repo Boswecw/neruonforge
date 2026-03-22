@@ -280,3 +280,45 @@ qwen3:14b scores are systematically higher across most dimensions and most scene
 **qwen3:14b is not the preferred model candidate** based on this evaluation. qwen2.5:14b remains the baseline. The primary next action should be prompt calibration to define voice_consistency as including POV fidelity, tested against both models, rather than a model switch.
 
 **next_required_decision update:** The POV-shift miscategorization is confirmed as systematic across both models and is a prompt-level gap. The prompt should be updated to define voice_consistency to include POV fidelity. Both models should be re-tested against the updated prompt on scene-04 and at least 2 additional POV-shift scenes before any candidate_baseline decision.
+
+---
+
+## Prompt fix: voice_consistency definition (2026-03-21)
+
+**Change:** Added explicit dimension definitions to `prompts/style-analysis-scene-v1.md`.
+`voice_consistency` now explicitly includes POV fidelity and penalizes mid-scene perspective drift.
+
+### POV validation results (qwen2.5:14b, updated prompt)
+
+| Scene | Description | voice_consistency | Expected | Pass |
+| ----- | ----------- | ----------------- | -------- | ---- |
+| 04-voice-drift | Mid-scene first-person intrusion | 0.60 | ≤ 0.50 | N |
+| 06-pov-hard | Sharp POV break to reader address | 1.00 | ≤ 0.40 | N |
+| 07-pov-subtle | Omniscient slip in limited-third | 1.00 | ≤ 0.65 | N |
+| 08-pov-clean | Clean consistent limited-third | 1.00 | ≥ 0.80 | Y |
+
+### Per-scene notes
+
+**scene-04-voice-drift:** voice_consistency improved from 0.85 (original prompt) to 0.60 (updated prompt). The model's overall_assessment explicitly mentions "voice consistency suffers from abrupt shifts in perspective" and the weakness finding is labeled "Unnecessary Narration" with detail noting it "reduces voice consistency." The dimension score moved in the correct direction and is now in the 0.50–0.65 range. The strict threshold of ≤ 0.50 was not met, but the improvement is meaningful and the model now correctly attributes the problem to voice_consistency rather than flow alone.
+
+**scene-06-pov-hard:** The model scored voice_consistency 1.00 and produced a "Consistent narrative voice" strength finding. It completely missed the second-paragraph reader-address ("I know what you're thinking...") as a POV violation. The model appears to have read the direct address as a narrative stylistic device rather than a POV break. The updated prompt definition was insufficient to catch this pattern. The scene may need a more explicit signal or the reader-address structure may require explicit mention in the dimension definition.
+
+**scene-07-pov-subtle:** The model scored voice_consistency 1.00 and produced no POV-relevant finding. The omniscient aside ("Across town, Marcus had already made his decision, though neither of them knew it yet.") was not flagged as a POV intrusion. The model summarized the scene as having "a consistent narrative voice" and noted a "smooth transition between scenes" as a recommendation (mentioning switching focus between characters), but did not identify it as a voice consistency violation. The subtle omniscient slip evaded detection entirely.
+
+**scene-08-pov-clean:** The model correctly scored voice_consistency 1.00, consistent with the clean POV. No false positive POV findings were generated. This is the correct result.
+
+### Prompt fix judgment
+
+The prompt fix is **partial**. One pass out of four criteria met (scene-08 clean POV correctly scored high).
+
+Scene-04 shows meaningful improvement (0.85 → 0.60) and the model now explicitly attributes the issue to voice_consistency in its assessment text, but the score remains above the ≤ 0.50 threshold. The prompt change had an effect on scene-04 specifically — the model previously attributed the same POV shift to flow/pacing but now attributes it to voice_consistency — but the score penalty is not steep enough.
+
+Scenes 06 and 07 remain entirely uncorrected. The model scores them at 1.00 with no POV-relevant findings. Two distinct failure modes are now visible:
+
+1. **Reader-address POV break (scene-06):** The model does not recognize direct second-person address ("I know what you're thinking...") as a voice consistency violation when it is framed as a parenthetical narrator intrusion. The prompt definition covers first-person introspection but may need to also explicitly name narrator intrusions that address the reader.
+
+2. **Omniscient slip in limited-third (scene-07):** A single sentence of omniscient narration embedded in a limited-third scene is not being caught. The model summarizes the Marcus paragraph as a "transition between characters" rather than a perspective violation. The prompt definition covers this case in principle ("narrator intrusions that break the established perspective") but the model is not applying it.
+
+The fix is confirmed working for the case it was directly designed to address (scene-04 mid-scene first-person block) but does not generalize to structurally different POV violations. Additional prompt refinement is required before the voice_consistency dimension can be considered reliably calibrated across POV violation types.
+
+**Next action:** Refine the voice_consistency definition further. Specifically: (1) add explicit mention of narrator-to-reader address as a POV violation; (2) add explicit mention of omniscient observations embedded in limited-third narration as a voice consistency failure; (3) re-test scenes 06 and 07 against the further-revised prompt. Scene-04 may require score threshold adjustment or acceptance at 0.60 as a partial fix.
