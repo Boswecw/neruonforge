@@ -518,3 +518,47 @@ at the current model tier. Update the lane record accordingly:
   candidate_baseline promotion; gate only on schema_reliability and non-POV dimensions
 - Log pov_fidelity limitation in provenance_notes; do not use pov_fidelity as a gate signal
   until a FRONTIER_CLOUD or dedicated-POV model evaluation is completed
+
+---
+
+## candidate_baseline promotion run (2026-03-22)
+
+**Decision gate:** Run full 5-scene baseline (scenes 01–05) with qwen2.5:14b against the
+final 6-dimension prompt. Pass criteria: schema_reliability 1.00, no regressions on
+diagnostic dimensions (sentence_variety on scene-03-flat, pacing on scene-02-dense).
+
+### Results
+
+| Scene | status | clarity | flow | voice_consistency | pov_fidelity | sentence_variety | pacing | confidence |
+|-------|--------|---------|------|-------------------|--------------|------------------|--------|------------|
+| 01-clean | valid | 0.95 | 0.94 | 1.00 | 1.00 | 0.72 | 0.86 | 0.98 |
+| 02-dense | valid | 0.80 | 0.70 | 1.00 | 1.00 | 0.60 | 0.50 | 0.90 |
+| 03-flat | valid | 0.80 | 0.50 | 1.00 | 1.00 | 0.30 | 0.60 | 0.90 |
+| 04-voice-drift | valid | 0.85 | 0.65 | 0.70 | 1.00 | 0.90 | 0.80 | 0.90 |
+| 05-dialogue-heavy | valid | 0.90 | 0.85 | 1.00 | 1.00 | 0.65 | 0.70 | 0.90 |
+
+schema_reliability: **5/5 = 1.00**
+
+### Comparison against original baseline
+
+| Scene | Dimension | Original | New | Delta | Assessment |
+|-------|-----------|----------|-----|-------|------------|
+| 03-flat | sentence_variety | 0.30 | 0.30 | 0.00 | Critical diagnostic signal preserved |
+| 02-dense | pacing | 0.60 | 0.50 | -0.10 | Improved signal (lower = more accurate) |
+| 02-dense | sentence_variety | 0.60 | 0.60 | 0.00 | Stable |
+| 03-flat | flow | 0.60 | 0.50 | -0.10 | Improved signal |
+| 03-flat | voice_consistency | 0.50 | 1.00 | +0.50 | Expected under narrowed definition — flat tone is tonally stable |
+| 04-voice-drift | voice_consistency | 0.85 | 0.70 | -0.15 | Improved — correctly scores lower under updated definition |
+| 01-clean | sentence_variety | 0.95 | 0.72 | -0.23 | Reduced inflation on clean scene |
+
+### Gate decision
+
+**Pass.** No regressions on diagnostic dimensions. Critical scores preserved or improved.
+voice_consistency changes are directionally correct given the narrowed tonal/register
+definition. pov_fidelity = 1.00 across all 5 scenes is the correct result — none of the
+baseline scenes contain POV violations.
+
+**Lane promoted to candidate_baseline.**
+
+pov_fidelity limitation stands: scores are advisory only, not gate-eligible, pending
+FRONTIER_CLOUD evaluation or a dedicated analyze.pov.scene.v1 contract.
