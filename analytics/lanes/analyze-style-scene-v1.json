@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schemas/lane-analytics.schema.json",
+  "schema_version": "1.0",
+  "lane_id": "analyze-style-scene-v1",
+  "lane_name": "Style Analysis — Scene (v1)",
+  "lane_type": "style_analysis",
+  "status": "implementing",
+  "required_route_class": "WORKHORSE_LOCAL",
+  "adoption_posture": "experimental_only",
+  "current_baseline_model": "qwen2.5:14b",
+  "current_baseline_prompt_profile": "style-analysis-scene-v1",
+  "anchor_input": null,
+  "anchor_run_id": null,
+  "last_evaluated_date": "2026-03-21",
+  "current_judgment": "Capability implemented and contract-backed (analyze.style.scene.v1). Route, normalization, and 25 unit tests exist. No governed evaluation runs have been executed. Metrics are placeholders. Adoption posture is experimental_only until a structured evaluation set and judgment session are completed.",
+  "calibration_doc": null,
+  "status_doc": null,
+  "metrics": {
+    "schema_reliability": 0.0,
+    "false_positive_rate": 0.0,
+    "surface_detection_rate": 0.0
+  },
+  "next_required_decision": "Define an evaluation input set (5-10 scene samples with known style characteristics). Run the capability against the set and record structured judgments. Produce a calibration doc and promote status to evaluating.",
+  "metric_provenance": "operator_judged",
+  "metrics_gate_eligible": false,
+  "provenance_notes": "No evaluation runs have been executed. All metric values are 0.0 placeholders — they do not represent measured performance. metric_profile is set to detection_reasoning as the closest available value; style analysis identifies issues and reasons about them but is not a binary detection task. A dedicated metric_profile value for structured analysis output (e.g. structured_analysis) should be added to the schema when the analysis capability family is formally registered.",
+  "metric_profile": "detection_reasoning"
+}
