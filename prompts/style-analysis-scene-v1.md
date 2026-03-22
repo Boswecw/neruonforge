@@ -84,46 +84,60 @@ Score each dimension from 0.0 (very poor) to 1.0 (excellent):
 
 - **clarity**: How easily the prose communicates its meaning. Penalize unclear antecedents, ambiguous phrasing, tangled syntax.
 - **flow**: How smoothly sentences and paragraphs connect. Penalize abrupt transitions, jarring rhythm breaks, non sequiturs.
-- **voice_consistency**: Does the prose sound like the same narrative voice throughout?
+- **voice_consistency**: Whether the narrative voice and stylistic register remain stable throughout the scene.
 
-  Evaluate stability of:
-  - narrative voice as stylistic surface
-  - diction and register (formal/informal/lyrical/clinical)
-  - sentence-rhythm persona
-  - narrator stance as expressed through word choice and tone
-
-  Penalize:
-  - abrupt register shifts (e.g. suddenly clinical in a lyrical passage)
-  - tonal/persona drift without dramatic intent
-  - narration that suddenly sounds like a different author or speaker
-  - stylistic inconsistencies that disrupt the prose surface
-
-  Do NOT use this dimension to penalize POV or perspective-boundary violations.
-  Those belong in pov_fidelity.
-
-- **pov_fidelity**: Does the scene remain inside the governing perspective contract throughout?
-
-  Establish the governing POV from the opening sentences. Hold it as the reference.
-  Do not infer the governing POV retroactively from a later paragraph that breaks the pattern.
-
-  Evaluate:
-  - perceptual access (what the POV character can see, hear, sense)
-  - epistemic boundary (what the POV character can know)
-  - psychic distance consistency
-  - person consistency (first-person, third-person limited, third-person omniscient)
-  - narrator intrusion or direct address that breaks the established stance
+  Evaluate continuity of:
+  - narrative voice
+  - diction and phrasing
+  - register (formal, casual, lyrical, clinical, etc.)
+  - sentence-level stylistic character
+  - narrator stance as a stylistic surface
 
   Penalize:
-  - explicit person shifts (third-person to first-person, etc.)
-  - head-hopping (access to thoughts outside the POV character)
-  - omniscient observations embedded in limited-third narration
-  - narrator-to-reader direct address in an otherwise non-direct narrative
-  - unmarked shifts in psychic distance that alter the governing stance
+  - abrupt or unmotivated shifts in tone or register
+  - narration that begins in one stylistic mode and slips into another without clear dramatic purpose
+  - inconsistent prose persona or storytelling posture
+  - sudden changes in narrative texture that make the scene sound like it was written in two different voices
 
-  Hard rule: Any unmotivated POV violation or break in the established perceptual/epistemic
-  boundary must score pov_fidelity LOW, even if prose quality, voice, or tone remain strong.
+  Important distinction:
+  - Score stylistic and tonal continuity here, not point-of-view boundary discipline.
+  - A POV violation should only reduce voice_consistency if it also changes the stylistic voice or register of the prose.
+  - Do not use this dimension as the main place to score head-hopping, person shifts, or unauthorized interior access.
 
-  Do not reclassify POV violations as voice, flow, or clarity problems.
+  Scoring anchors:
+  - LOW: major tonal/register drift; the prose sounds like multiple conflicting narrative voices
+  - MEDIUM: mostly stable voice, but with noticeable stylistic wobble or some inconsistent register choices
+  - HIGH: the scene maintains a clear, stable stylistic voice and register throughout
+
+- **pov_fidelity**: Whether the scene preserves a single, coherent governing point-of-view contract from beginning to end.
+
+  Determine the governing POV from the opening of the scene, then evaluate whether the rest of the scene remains faithful to that perspective boundary.
+
+  Evaluate continuity of:
+  - grammatical person (first, second, close third, omniscient, etc.)
+  - focal character / governing perspective holder
+  - perceptual access (what can be seen, heard, felt, noticed from that POV)
+  - epistemic access (what can be known, inferred, or stated from that POV)
+  - interior access (thoughts, feelings, memories, judgments)
+  - psychic distance, if it changes in a way that breaks the governing POV contract
+
+  Penalize:
+  - shifts from one grammatical person to another without clear structural justification
+  - head-hopping between characters inside the same scene
+  - access to thoughts, feelings, perceptions, or knowledge outside the established POV boundary
+  - unmarked switches from limited perspective to omniscient narration
+  - narrator intrusions or direct address that break the established perspective contract
+  - perspective leakage where the narration reports facts the focal viewpoint could not reasonably know in that moment
+
+  Hard rule:
+  - Any unmotivated POV violation must materially reduce pov_fidelity, even if prose quality, tone, flow, or voice remain strong.
+  - Clear mid-scene person shift or unauthorized interior access should score pov_fidelity LOW.
+
+  Important distinction:
+  - Score POV boundary discipline here, not general tone or register consistency.
+  - Do not treat POV violations as merely flow, clarity, or voice_consistency problems.
+
+  A scene may score HIGH on voice_consistency while scoring LOW on pov_fidelity if the prose maintains a stable stylistic voice but violates the governing perspective boundary.
 - **sentence_variety**: Whether sentence length and structure are varied enough to sustain reader engagement. Penalize repetitive short sentences, repetitive long sentences, and monotone rhythm.
 - **pacing**: Whether the scene's tempo suits its dramatic content. Penalize rushed emotional beats, over-extended action, and unearned slow-downs.
 
