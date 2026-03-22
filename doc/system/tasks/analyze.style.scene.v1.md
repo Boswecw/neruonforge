@@ -240,6 +240,42 @@ POST /api/v1/authorforge/style-analysis
 
 ---
 
+## Lane status
+
+| Field | Value |
+| ----- | ----- |
+| lane_id | `analyze-style-scene-v1` |
+| status | `candidate_baseline` |
+| adoption_posture | `experimental_only` |
+| current_baseline_model | `qwen2.5:14b` |
+| current_baseline_prompt_profile | `style-analysis-scene-v1` |
+| last_evaluated_date | 2026-03-22 |
+| metrics_gate_eligible | false |
+| lane_record | `analytics/lanes/analyze-style-scene-v1.json` |
+| calibration_doc | `evals/style-analysis-calibration-2026-03-21.md` |
+
+### pov_fidelity advisory limitation
+
+`pov_fidelity` scores from all tested WORKHORSE_LOCAL models are advisory only.
+
+A multi-model survey (qwen2.5:14b, qwen3:14b, cogito:14b, gemma3:12b, phi4-reasoning)
+confirmed that no available WORKHORSE_LOCAL model passes all 4 POV validation thresholds.
+The best result is 2/4.
+
+| Violation type | Detection reliability |
+| -------------- | --------------------- |
+| Explicit person shift (e.g. 3rd-person → 1st-person block) | Detectable by cogito:14b and gemma3:12b; not by qwen models |
+| Reader address ("I know what you're thinking...") | Not reliably detected by any tested model |
+| Subtle omniscient aside in limited-third | Inconsistently detected — not generalizable |
+| Clean POV (no violation) | Correctly scored ≥ 0.80 by all models |
+
+`pov_fidelity` is the correct semantic dimension and correctly separates perspective
+contract from tonal register. However, scores must not be used as gate signals for
+POV enforcement until a FRONTIER_CLOUD evaluation or dedicated `analyze.pov.scene.v1`
+contract is completed.
+
+---
+
 ## Governance notes
 
 - This contract is `v1`. Changes to required fields, dimensions, or validation rules require a version bump.
@@ -247,3 +283,4 @@ POST /api/v1/authorforge/style-analysis
 - The prompt is hidden behind the contract boundary.
 - Model selection is separate from the contract and governed by the route class policy.
 - This contract is advisory only. Output is `inferred_candidate`, never `authority_persisted`.
+- `pov_fidelity` scores are advisory only — see Lane status above for the documented limitation.

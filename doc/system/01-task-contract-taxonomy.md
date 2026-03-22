@@ -542,6 +542,7 @@ AuthorForge docs already define Bloom as a narrative timeline over chapters/scen
 
 Early contracts:
 
+- `analyze.style.scene.v1` — **live, candidate_baseline** (2026-03-22)
 - `analyze.continuity.scene_window.v1`
 - `analyze.pacing.scene_window.v1`
 - `analyze.voice.scene.v1`
@@ -629,6 +630,7 @@ Start with a small, disciplined set.
 
 ### 14.3 Analysis starter set
 
+- `analyze.style.scene.v1` — **live, candidate_baseline** (qwen2.5:14b, experimental_only)
 - `analyze.continuity.scene_window.v1`
 - `analyze.pacing.scene_window.v1`
 
