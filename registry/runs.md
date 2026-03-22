@@ -1130,3 +1130,48 @@
   output file: outputs/phi4-14b-continuity-adj-cp012-sc-a-cp012-sc-b-run-2026-03-14-082.envelope.json
   task: analyze.continuity.adjacent_scene.v1
   notes: adjacent_scene: cp012-sc-a+cp012-sc-b, findings: 1
+
+- run id: run-2026-03-21-001
+  date: 2026-03-21
+  model: qwen2.5:14b
+  prompt file: prompts/style-analysis-scene-v1.md
+  input file: inputs/style-analysis-eval/scene-01-clean.md
+  output file: evals/style-analysis-eval-2026-03-21/raw/qwen2.5-14b-style-scene-01-clean.md-run-2026-03-21-001.envelope.json
+  task: analyze.style.scene.v1
+  notes: style analysis, status: failed
+
+- run id: run-2026-03-21-002
+  date: 2026-03-21
+  model: qwen2.5:14b
+  prompt file: prompts/style-analysis-scene-v1.md
+  input file: inputs/style-analysis-eval/scene-02-dense.md
+  output file: evals/style-analysis-eval-2026-03-21/raw/qwen2.5-14b-style-scene-02-dense.md-run-2026-03-21-002.envelope.json
+  task: analyze.style.scene.v1
+  notes: style analysis, status: failed
+
+- run id: run-2026-03-21-003
+  date: 2026-03-21
+  model: qwen2.5:14b
+  prompt file: prompts/style-analysis-scene-v1.md
+  input file: inputs/style-analysis-eval/scene-03-flat.md
+  output file: evals/style-analysis-eval-2026-03-21/raw/qwen2.5-14b-style-scene-03-flat.md-run-2026-03-21-003.envelope.json
+  task: analyze.style.scene.v1
+  notes: style analysis, status: failed
+
+- run id: run-2026-03-21-004
+  date: 2026-03-21
+  model: qwen2.5:14b
+  prompt file: prompts/style-analysis-scene-v1.md
+  input file: inputs/style-analysis-eval/scene-04-voice-drift.md
+  output file: evals/style-analysis-eval-2026-03-21/raw/qwen2.5-14b-style-scene-04-voice-drift.md-run-2026-03-21-004.envelope.json
+  task: analyze.style.scene.v1
+  notes: style analysis, status: failed
+
+- run id: run-2026-03-21-005
+  date: 2026-03-21
+  model: qwen2.5:14b
+  prompt file: prompts/style-analysis-scene-v1.md
+  input file: inputs/style-analysis-eval/scene-05-dialogue-heavy.md
+  output file: evals/style-analysis-eval-2026-03-21/raw/qwen2.5-14b-style-scene-05-dialogue-heavy.md-run-2026-03-21-005.envelope.json
+  task: analyze.style.scene.v1
+  notes: style analysis, status: failed
