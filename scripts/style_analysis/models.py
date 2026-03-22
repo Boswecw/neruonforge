@@ -8,7 +8,7 @@ Scope:          scene
 Output mode:    STRUCTURED_ANALYSIS
 Runtime posture: WORKHORSE_LOCAL
 
-V1 frozen dimension set: clarity, flow, voice_consistency, sentence_variety, pacing
+V1 frozen dimension set: clarity, flow, voice_consistency, pov_fidelity, sentence_variety, pacing
 """
 
 from __future__ import annotations
@@ -55,7 +55,7 @@ class StyleRecommendation(BaseModel):
 
 # V1 frozen dimensions — do not add or remove without a contract version bump.
 _V1_DIMENSIONS: frozenset[str] = frozenset(
-    {"clarity", "flow", "voice_consistency", "sentence_variety", "pacing"}
+    {"clarity", "flow", "voice_consistency", "pov_fidelity", "sentence_variety", "pacing"}
 )
 
 
@@ -70,7 +70,7 @@ class StyleAnalysisOutputPayload(BaseModel):
         ...,
         description=(
             "Scores for each frozen v1 dimension (clarity, flow, voice_consistency, "
-            "sentence_variety, pacing). Values 0.0–1.0."
+            "pov_fidelity, sentence_variety, pacing). Values 0.0–1.0."
         ),
     )
     findings: list[StyleFinding] = Field(

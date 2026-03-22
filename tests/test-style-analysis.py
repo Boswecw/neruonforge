@@ -72,6 +72,7 @@ _VALID_MODEL_JSON = json.dumps(
             "clarity": 0.85,
             "flow": 0.78,
             "voice_consistency": 0.90,
+            "pov_fidelity": 0.85,
             "sentence_variety": 0.55,
             "pacing": 0.80,
         },
@@ -110,6 +111,7 @@ _DEGRADED_EMPTY_SPANS_JSON = json.dumps(
             "clarity": 0.8,
             "flow": 0.7,
             "voice_consistency": 0.85,
+            "pov_fidelity": 0.90,
             "sentence_variety": 0.5,
             "pacing": 0.75,
         },
@@ -128,6 +130,7 @@ _DEGRADED_LOW_CONFIDENCE_JSON = json.dumps(
             "clarity": 0.8,
             "flow": 0.7,
             "voice_consistency": 0.85,
+            "pov_fidelity": 0.90,
             "sentence_variety": 0.5,
             "pacing": 0.75,
         },
@@ -146,6 +149,7 @@ _DEGRADED_MISSING_DIMENSION_JSON = json.dumps(
             "clarity": 0.8,
             "flow": 0.7,
             # voice_consistency missing → degraded
+            "pov_fidelity": 0.90,
             "sentence_variety": 0.5,
             "pacing": 0.75,
         },
@@ -169,6 +173,7 @@ _MISSING_SUMMARY_JSON = json.dumps(
             "clarity": 0.8,
             "flow": 0.7,
             "voice_consistency": 0.85,
+            "pov_fidelity": 0.90,
             "sentence_variety": 0.5,
             "pacing": 0.75,
         },
@@ -187,6 +192,7 @@ _MISSING_OVERALL_ASSESSMENT_JSON = json.dumps(
             "clarity": 0.8,
             "flow": 0.7,
             "voice_consistency": 0.85,
+            "pov_fidelity": 0.90,
             "sentence_variety": 0.5,
             "pacing": 0.75,
         },
@@ -217,6 +223,7 @@ _CLAMPED_SCORES_JSON = json.dumps(
             "clarity": 1.5,    # > 1.0 → clamped to 1.0
             "flow": -0.2,      # < 0.0 → clamped to 0.0
             "voice_consistency": 0.9,
+            "pov_fidelity": 0.85,
             "sentence_variety": 0.5,
             "pacing": 0.6,
         },
@@ -338,6 +345,7 @@ class TestNormalizer(unittest.TestCase):
         self.assertIn("clarity", result.output_payload.dimension_scores)
         self.assertIn("flow", result.output_payload.dimension_scores)
         self.assertIn("voice_consistency", result.output_payload.dimension_scores)
+        self.assertIn("pov_fidelity", result.output_payload.dimension_scores)
         self.assertIn("sentence_variety", result.output_payload.dimension_scores)
         self.assertIn("pacing", result.output_payload.dimension_scores)
         for score in result.output_payload.dimension_scores.values():
@@ -611,17 +619,17 @@ class TestDimensionNormalization(unittest.TestCase):
         assert result.output_payload is not None
         self.assertEqual(result.output_payload.dimension_scores["voice_consistency"], 0.0)
         # All other dimensions should be present
-        for dim in ("clarity", "flow", "sentence_variety", "pacing"):
+        for dim in ("clarity", "flow", "pov_fidelity", "sentence_variety", "pacing"):
             self.assertIn(dim, result.output_payload.dimension_scores)
         # Warning must mention the missing key
         missing_warned = any("voice_consistency" in w for w in result.warnings)
         self.assertTrue(missing_warned)
 
-    def test_all_five_dimensions_always_present_in_output(self) -> None:
-        """Normalized output always contains all five v1 dimensions."""
+    def test_all_six_dimensions_always_present_in_output(self) -> None:
+        """Normalized output always contains all six v1 dimensions."""
         result = normalize_model_output(_VALID_MODEL_JSON, model_id="qwen2.5:14b")
         assert result.output_payload is not None
-        for dim in ("clarity", "flow", "voice_consistency", "sentence_variety", "pacing"):
+        for dim in ("clarity", "flow", "voice_consistency", "pov_fidelity", "sentence_variety", "pacing"):
             self.assertIn(dim, result.output_payload.dimension_scores)
 
 

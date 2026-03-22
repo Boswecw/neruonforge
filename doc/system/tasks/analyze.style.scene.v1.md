@@ -18,7 +18,7 @@ Date: 2026-03-21
 
 ## Purpose
 
-Accept a bounded single-scene text payload and return a structured advisory analysis artifact covering style dimensions: clarity, flow, voice_consistency, sentence_variety, and pacing.
+Accept a bounded single-scene text payload and return a structured advisory analysis artifact covering style dimensions: clarity, flow, voice_consistency, pov_fidelity, sentence_variety, and pacing.
 
 This is the first live task contract for style analysis in NeuronForge.
 
@@ -40,13 +40,18 @@ This contract does not support:
 
 The following dimensions are frozen for v1 and are non-configurable:
 
-| Dimension | Key | Range |
-|-----------|-----|-------|
-| Clarity | `clarity` | 0.0–1.0 |
-| Flow | `flow` | 0.0–1.0 |
-| Voice Consistency | `voice_consistency` | 0.0–1.0 |
-| Sentence Variety | `sentence_variety` | 0.0–1.0 |
-| Pacing | `pacing` | 0.0–1.0 |
+| Dimension | Key | Range | Scope |
+|-----------|-----|-------|-------|
+| Clarity | `clarity` | 0.0–1.0 | Prose communicates meaning clearly |
+| Flow | `flow` | 0.0–1.0 | Sentence and paragraph connections are smooth |
+| Voice Consistency | `voice_consistency` | 0.0–1.0 | Tonal/register/stylistic surface stability only |
+| POV Fidelity | `pov_fidelity` | 0.0–1.0 | Perspective contract enforcement |
+| Sentence Variety | `sentence_variety` | 0.0–1.0 | Sentence length and structural variation |
+| Pacing | `pacing` | 0.0–1.0 | Scene tempo suits dramatic content |
+
+`voice_consistency` is scoped to tonal, register, and stylistic surface consistency.
+It does not cover perspective or POV boundary violations — those are the exclusive domain
+of `pov_fidelity`.
 
 ---
 
@@ -101,6 +106,7 @@ On success:
       "clarity": 0.0,
       "flow": 0.0,
       "voice_consistency": 0.0,
+      "pov_fidelity": 0.0,
       "sentence_variety": 0.0,
       "pacing": 0.0
     },
@@ -148,7 +154,7 @@ On failed schema validation or parse failure:
 |-------|------|-----------|
 | `summary` | string | Non-empty |
 | `overall_assessment` | string | Non-empty |
-| `dimension_scores` | object | Keys: clarity, flow, voice_consistency, sentence_variety, pacing; values 0.0–1.0 |
+| `dimension_scores` | object | Keys: clarity, flow, voice_consistency, pov_fidelity, sentence_variety, pacing; values 0.0–1.0 |
 | `findings` | array | List of StyleFinding objects |
 | `recommendations` | array | List of StyleRecommendation objects |
 | `confidence` | float | 0.0–1.0 |

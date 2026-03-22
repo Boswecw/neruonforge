@@ -374,3 +374,41 @@ not expected to close it.
    or a dedicated POV detection contract (e.g. analyze.pov.scene.v1 as a separate capability)
 4. Do not block candidate_baseline on POV score thresholds — block only on schema_reliability
    and tonal voice_consistency, which are reliably scored
+
+---
+
+## Schema change: voice_consistency split into voice_consistency + pov_fidelity (2026-03-21)
+
+**Change:** Frozen dimension set expanded from 5 to 6. voice_consistency narrowed to
+tonal/register/stylistic surface. pov_fidelity added as dedicated dimension for
+perspective contract enforcement.
+
+### POV validation results post-split (qwen2.5:14b)
+
+| Scene | voice_consistency | pov_fidelity | pov_fidelity threshold | Pass |
+|-------|-----------------|--------------|----------------------|------|
+| 04-voice-drift | 0.75 | 1.00 | ≤ 0.50 | N |
+| 06-pov-hard | 1.00 | 1.00 | ≤ 0.40 | N |
+| 07-pov-subtle | 0.85 | 0.60 | ≤ 0.65 | Y |
+| 08-pov-clean | 1.00 | 1.00 | ≥ 0.80 | Y |
+
+### Post-split judgment
+
+The dimension split did not resolve the overloaded-dimension problem at the score level.
+qwen2.5:14b scores pov_fidelity 1.00 on both scene-04 (mid-scene first-person intrusion)
+and scene-06 (direct reader address) — the same failure mode previously seen in
+voice_consistency. The model does not penalize POV violations in scores regardless of
+which dimension key is used. scene-07 (omniscient slip) passes at 0.60 ≤ 0.65, consistent
+with the previous round-2 voice_consistency result of 0.60. scene-08 (clean POV) correctly
+scores 1.00.
+
+The split cleanly separates the semantic concern — tonal register is now in voice_consistency,
+perspective contract is in pov_fidelity — and is the correct architectural change for
+consumers who need to distinguish those failure modes. However, qwen2.5:14b does not reliably
+produce low pov_fidelity scores for scenes 04 and 06. This is the same model capability
+limit documented in the round-2 diagnosis: the model can label POV violations in findings
+and evidence spans but cannot consistently penalise them at the score level.
+
+The split is the right schema design. The model limitation is unchanged. Proceed with
+pov_fidelity in the schema; require a more capable model or a dedicated POV contract
+before treating pov_fidelity scores as reliable gate signals.
